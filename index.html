@@ -1979,11 +1979,7 @@ document.getElementById('pdfModal1').addEventListener('click', function(e) {
 });
 function openReport(pdfPath, modalId) {
     if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        // On mobile - show a styled prompt before opening
-        const confirmed = confirm('The report will open in a new tab for viewing.');
-        if (confirmed) {
-            window.open(pdfPath, '_blank');
-        }
+        window.open(pdfPath, '_blank');
     } else {
         document.getElementById(modalId).style.display = 'flex';
     }

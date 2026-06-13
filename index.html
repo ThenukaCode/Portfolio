@@ -1977,11 +1977,6 @@ window.addEventListener('scroll', () => {
 document.getElementById('pdfModal1').addEventListener('click', function(e) {
     if (e.target === this) this.style.display = 'none';
 });
-
-document.getElementById('pdfModal2').addEventListener('click', function(e) {
-    if (e.target === this) this.style.display = 'none';
-});
-
 function openReport(pdfPath, modalId) {
     if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
         window.open(pdfPath, '_blank');
@@ -1989,6 +1984,7 @@ function openReport(pdfPath, modalId) {
         document.getElementById(modalId).style.display = 'flex';
     }
 }
+
 </script>
 </body>
 </html>

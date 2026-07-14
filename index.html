@@ -1039,6 +1039,22 @@ html, body {
         display: none;
     }
 }
+@media (max-width: 768px) {
+    #experience .about-card > div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #experience .about-card > div > div:last-child {
+        text-align: left;
+    }
+
+    #experience .research-tags,
+    #experience div[style*="flex-wrap: wrap"] {
+        justify-content: center;
+    }
+}
     </style>
 </head>
 <body>
@@ -1232,17 +1248,20 @@ html, body {
         <div class="reveal">
             <div class="about-card" style="padding: 30px;">
 
-                <!-- Top row: icon + title + badge -->
-                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 16px; flex-wrap: wrap;">
+                <!-- PC: horizontal row | Mobile: centered column -->
+                <div style="display: flex; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+
+                    <!-- Icon -->
                     <div style="
-                        width: 50px; height: 50px;
-                        min-width: 50px;
+                        width: 55px; height: 55px;
+                        min-width: 55px;
                         background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(34,211,238,0.1));
                         border: 1px solid rgba(59,130,246,0.25);
                         border-radius: 14px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        margin: 0 auto;
                     ">
                         <svg width="26" height="26" fill="none" stroke="#3B82F6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                             <rect x="2" y="7" width="20" height="14" rx="2"/>
@@ -1251,8 +1270,10 @@ html, body {
                             <line x1="10" y1="14" x2="14" y2="14"/>
                         </svg>
                     </div>
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+
+                    <!-- Content -->
+                    <div style="flex: 1; min-width: 0;">
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 5px;">
                             <h5 style="margin: 0; color: white; font-family: Syne, sans-serif; font-size: 1rem;">Business Analyst Intern</h5>
                             <span style="
                                 background: rgba(34,211,238,0.1);
@@ -1265,30 +1286,24 @@ html, body {
                                 white-space: nowrap;
                             ">Incoming</span>
                         </div>
-                        <div style="color: #3B82F6; font-weight: 600; font-size: 0.88rem; margin-top: 3px;">DIMO Lanka</div>
+                        <div style="color: #3B82F6; font-weight: 600; font-size: 0.88rem; margin-bottom: 4px;">DIMO Lanka</div>
+                        <div style="color: var(--muted); font-size: 0.78rem; margin-bottom: 14px;">
+                            Medical Engineering Department &nbsp;·&nbsp; Aug 2026 — Present
+                        </div>
+                        <p style="color: var(--muted); font-size: 0.85rem; line-height: 1.75; margin: 0 0 16px 0;">
+                            Joining DIMO Lanka's Medical Engineering Department as a Business Analyst Intern, 
+                            contributing to business process analysis, requirements gathering, and digital 
+                            transformation initiatives within the medical engineering sector.
+                        </p>
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <span class="research-tag">Business Analysis</span>
+                            <span class="research-tag">Medical Engineering</span>
+                            <span class="research-tag">Requirements Gathering</span>
+                            <span class="research-tag">Process Analysis</span>
+                        </div>
                     </div>
+
                 </div>
-
-                <!-- Department & Date -->
-                <div style="color: var(--muted); font-size: 0.78rem; margin-bottom: 14px;">
-                    Medical Engineering Department &nbsp;·&nbsp; Aug 2026 — Present
-                </div>
-
-                <!-- Description -->
-                <p style="color: var(--muted); font-size: 0.85rem; line-height: 1.75; margin: 0 0 18px 0;">
-                    Joining DIMO Lanka's Medical Engineering Department as a Business Analyst Intern, 
-                    contributing to business process analysis, requirements gathering, and digital 
-                    transformation initiatives within the medical engineering sector.
-                </p>
-
-                <!-- Tags -->
-                <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                    <span class="research-tag">Business Analysis</span>
-                    <span class="research-tag">Medical Engineering</span>
-                    <span class="research-tag">Requirements Gathering</span>
-                    <span class="research-tag">Process Analysis</span>
-                </div>
-
             </div>
         </div>
     </div>
